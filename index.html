@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- FavIcon -->
+     <!-- These are reference files - Must be replaced with the actual ones - Remove this comment once done! -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon/favicon-16x16.png"
+    />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="manifest" href="./assets/favicon/site.webmanifest" />
+
+    <!-- CSS stylesheets -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Country ISO Codes Searcher</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Search countries for ISO codes</h1>
+    </header>
+    <main class="main">
+      <div class="input-wrapper">
+        <div class="inner-input-wrapper">
+          <label id="label-iso" class="label-iso">
+            <input type="text" maxlength="2" id="input-iso" class="input-iso" required>
+            <span class="span-text">Enter Iso code</span>
+          </label>
+        </div>
+        <button id="search" class="search">Search</button>
+      </div>
+      <img src="" class="flag-img" id="flag-img">
+      <p class="result" id="result"></p>
+    </main>
+
+    <!-- Main Script file -->
+    <script src="./main.js"></script>
+    
+    <!-- All country Iso Codes -->
+    <script src="./assets/IsoCodes.js"></script>
+  </body>
+</html>

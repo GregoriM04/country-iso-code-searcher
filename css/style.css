@@ -1,0 +1,185 @@
+/* Importing local fonts */
+@import url("./fonts.css");
+
+/* Custom variables */
+:root {
+  /* Colors */
+  --primary-color: #153bd1;
+  --secondary-color: #5b7cff;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  /* fonts */
+  --primary-font: "Poppins", sans-serif;
+
+  /* transitions */
+  --trans-3s: all 0.3s ease;
+  --trans-5s: all 0.5s ease;
+
+  /* spacings */
+  --spacing-1: 0.25rem; /* 4px */
+  --spacing-2: 0.5rem; /* 8px */
+  --spacing-3: 1rem; /* 16px */
+  --spacing-4: 1.5rem; /* 24px */
+  --spacing-5: 2rem; /* 32px */
+  --spacing-6: 3rem; /* 48px */
+  --spacing-7: 6rem; /* 96px */
+
+  /* Box-shadow */
+  --shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.3);
+
+  /* typography size */
+  --ty-size-h1: 2.125rem; /* 34px */
+  --ty-size-h2: 1.6rem; /* 25.6px */
+  --ty-size-h3: 1.25rem; /* 20px */
+  --ty-size-p: 1rem; /* 16px */
+}
+
+/* Resets */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--primary-font);
+}
+
+body {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+h1 {
+  font-size: var(--ty-size-h1);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: var(--ty-size-h2);
+  font-weight: 700;
+}
+
+h3 {
+  font-size: var(--ty-size-h3);
+  font-weight: 500;
+}
+
+p,
+a,
+button {
+  font-size: var(--ty-size-p);
+  font-weight: 500;
+}
+
+/* Header style */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-6);
+  flex-wrap: wrap;
+}
+
+.title {
+  text-align: center;
+  min-width: 290px;
+}
+
+/* Main style */
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: var(--spacing-5);
+  flex-direction: column;
+}
+
+.input-iso, 
+.search {
+  width: 320px;
+  height: 50px;
+  margin: var(--spacing-1);
+}
+
+.input-iso {
+  padding-left: 10px;
+  font-size: var(--ty-size-h3);
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: var(--spacing-2);
+  outline: 1px solid var(--secondary-color);
+}
+
+.input-iso:focus {
+  outline: 2px solid var(--primary-color);
+}
+
+.inner-input-wrapper {
+  position: relative;
+}
+
+.span-text {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  font-size: var(--ty-size-p);
+  transition: var(--trans-3s);
+  font-weight: 100;
+  background-color: var(--white-color);
+  padding: var(--spacing-1);
+}
+
+.label-iso > .input-iso:focus + .span-text,
+.label-iso > .input-iso:valid + .span-text {
+  top: -11px;
+  left: 12px;
+  font-size: 13px;
+}
+
+.search {
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border: 2px solid var(--secondary-color);
+  transition: var(--trans-3s);
+  cursor: pointer;
+}
+
+.search:hover {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
+
+.search:active {
+  background-color: var(--white-color);
+  color: var(--black-color);
+}
+
+.flag-img {
+  margin-top: var(--spacing-4);
+  max-width: 200px;
+  height: auto;
+  display: none;
+}
+
+.flag-img:hover {
+  transition: var(--trans-5s);
+  transform: translateY(-3px);
+}
+
+.result {
+  font-size: var(--ty-size-h2);
+  margin-top: var(--spacing-4);
+  text-wrap: wrap;
+  text-align: center;
+  max-width: 550px;
+}
