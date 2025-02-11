@@ -12,9 +12,15 @@ function searchIsoCode() {
   if (inputString[0] === "") {
     flagImg.style.display = "none";
     selectText(inputIso);
+    inputIso.classList.add("shake");
+    setTimeout(() => {
+      inputIso.classList.remove("shake");
+    }, 3000);
     return (result.innerText = "Typing error. Please retry!");
   } else {
-    const found = IsoCodes.find((element) => element.iso_code === userTextInput);
+    const found = IsoCodes.find(
+      (element) => element.iso_code === userTextInput
+    );
     text = found;
   }
 
@@ -47,8 +53,7 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-
 function selectText(input) {
-    input.focus();
-    input.select();
+  input.focus();
+  input.select();
 }
